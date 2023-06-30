@@ -6,8 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @prototype
     else
-      flash[:error] = "コメントの作成に失敗しました"
-      render "prototypes/show"
+      render :show
     end
   end
 
