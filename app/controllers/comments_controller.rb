@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @prototype
     else
-      render :show
+      render @prototype
     end
   end
 
