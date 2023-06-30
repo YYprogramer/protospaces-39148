@@ -6,7 +6,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @prototype
     else
-      render "comments/show"
+      # 空欄でコメントを送信した場合にエラーを起こすのではなく詳細ページに遷移するようにしたい
+      render "prototypes/show"
     end
   end
 
